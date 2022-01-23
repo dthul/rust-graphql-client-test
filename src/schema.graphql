@@ -1,0 +1,18 @@
+type CreateEventInput {
+    title: String!
+    description: String!
+}
+
+type CreateEventPayload {
+    event: Event
+}
+
+type Event {
+    id: ID!
+    title: String!
+    description: String!
+}
+
+type Mutation {
+    createEvent(input: CreateEventInput!): CreateEventPayload!
+}
